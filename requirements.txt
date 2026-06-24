@@ -1,2 +1,7 @@
 numpy
 pytest
+numpy
+pytest
+gymnasium
+stable-baselines3
+tensorboard
