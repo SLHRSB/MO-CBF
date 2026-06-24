@@ -145,24 +145,13 @@ The second metric provides a more meaningful measure of policy safety alignment 
 
 ---
 
-## Limitations
-
-Current implementation has several limitations:
-
-* Explicit fixed and stochastic sensor-delay experiments are not included.
-* Results may vary across simulators and hardware configurations.
-* Hyperparameters were tuned for the scenarios reported in the paper.
-* Additional evaluation under broader traffic conditions remains future work.
-
----
-
 ## Citation
 
 If you use this repository in your research, please cite:
 
 ```bibtex
 @article{,
-  title={Multi-Output Control Barrier Function Safety Filter for Reinforcement Learning-Based Autonomous Driving},
+  title={Multi-Output Control Barrier Function for Safe and Secure Control in DRL-Based Autonomous Driving},
   author={Lohrasbi, Saeedeh and others},
   journal={TBD},
   year={2026}
