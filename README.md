@@ -2,9 +2,9 @@
 
 This repository contains the implementation of the **Multi-Output Control Barrier Function (MO-CBF)** framework proposed in:
 
-> **[Paper Title]**
-> Saeedeh Lohrasbi et al.
-> *(will be updated with final citation after publication.)*
+> **Multi-Output Control Barrier Function for Safe and Secure Control in DRL-Based Autonomous Driving**
+> Saeedeh Lohrasbi, Mahsa Golchoubian, and Nasser Lashgarian Azad
+
 
 MO-CBF integrates a model-based safety filter with Deep Reinforcement Learning (DRL) to improve safety during both training and deployment. The framework combines a multi-objective Control Barrier Function (CBF) safety layer with an overriding penalty mechanism that encourages the RL agent to learn policies naturally aligned with safety constraints.
 
