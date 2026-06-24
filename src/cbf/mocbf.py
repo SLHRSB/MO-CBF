@@ -234,8 +234,8 @@ class MOCBF:
         """
         Compute h(x) = d - T_h * v_ego.
 
-        Positive h(x) means the vehicle is outside the nominal safety boundary.
-        Negative h(x) means the vehicle is inside the safety boundary and a CBF intervention is not required.
+        Positive h(x) indicates satisfaction of the nominal time-headway safety set.
+        Negative h(x) indicates that the vehicle is outside the defined safe set.
         """
 
         return float(leader_distance - self.params.time_headway * ego_speed)
@@ -285,7 +285,7 @@ class MOCBF:
         net_force_threshold = resistance + (p.mass / p.time_headway) * (
             p.cbf_gain * leader_distance
             + leader_speed
-            - (p.time_headway + 1.0) * ego_speed
+            - (p.cbf_gain * p.time_headway + 1.0) * ego_speed
         )
 
         torque_threshold = (net_force_threshold * p.wheel_radius) / p.gear_ratio
@@ -317,7 +317,8 @@ class MOCBF:
             leader_speed=leader_speed,
         )
 
-        required_brake_force = engine_drag_force - drive_torque_threshold
+        allowable_drive_force = (drive_torque_threshold * p.gear_ratio) / p.wheel_radius
+        required_brake_force = engine_drag_force - allowable_drive_force
 
         return float(required_brake_force)
 
