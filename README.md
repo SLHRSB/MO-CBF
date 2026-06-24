@@ -62,35 +62,6 @@ The framework is evaluated under multiple testing scenarios:
 
 ---
 
-## Repository Structure
-
-```text
-MO-CBF/
-│
-├── configs/           # Experiment configurations
-├── src/
-│   ├── agents/        # PPO agents
-│   ├── cbf/           # MO-CBF implementation
-│   ├── envs/          # Driving environments
-│   ├── attacks/       # Adversarial attack modules
-│   └── utils/
-│
-├── scripts/
-│   ├── train.py
-│   ├── evaluate.py
-│   └── plot_results.py
-│
-├── results/
-├── figures/
-├── docs/
-│
-├── README.md
-├── requirements.txt
-└── LICENSE
-```
-
----
-
 ## Installation
 
 ### Clone the Repository
