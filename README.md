@@ -96,7 +96,7 @@ MO-CBF/
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/<username>/MO-CBF.git
+git clone https://github.com/SLHRSB/MO-CBF.git
 cd MO-CBF
 ```
 
